@@ -1,0 +1,59 @@
+body {
+    margin: 0;
+    font-family: monospace;
+    background-color: #111111;
+    color: #ffffff;
+    overflow: hidden;
+}
+
+.terminal-container {
+    display: flex;
+    flex-direction: column;
+    height: 96vh;
+    padding: 20px;
+}
+
+.terminal-output {
+    flex: 1;
+    overflow-y: auto;
+    margin-bottom: 10px;
+    scrollbar-width: none;
+}
+
+#terminal-input {
+    height: 40px;
+    width: 100%;
+    background: transparent;
+    border: none;
+    outline: none;
+    color: #ffffff;
+    font-size: 1rem;
+    border-top: 1px solid #222222;
+}
+
+.command-line::before {
+    content: attr(data-directory) "";
+    color: #855d9c79;
+    margin-right: 5px;
+}
+
+/* Output colors */
+.normal {
+    color: #f1b8ff;
+}
+
+.error {
+    color: #ff0000; 
+}
+
+.warning {
+    color: #ffa600; 
+}
+
+.command {
+    color: #855d9c;
+}
+
+.echo {
+    color: #00bfff;
+}
